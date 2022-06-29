@@ -22,7 +22,7 @@ The repository **FlexCov** was created to provide all data and code to reproduce
 - contains all do-files analysis files necessary to perform data cleaning and analysis reported
 
 **`/data_out`**
-- contains the analysis data set, , to be then used in `/do-files/FlexCoV_analyses.do.`
+- contains the analysis data set , to be then used in `/do-files/FlexCoV_analyses.do.`
 
 
 
