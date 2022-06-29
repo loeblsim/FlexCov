@@ -9,7 +9,7 @@
 
 ## Purpose of the Repository
 The repository **FlexCov** was created to provide all data and code to reproduce findings reported in:
-> anonymous (2022). *Flexible societies excelled in saving lives in the first phase of the COVID-19 pandemic.*
+> XXX (2022). *Flexible societies excelled in saving lives in the first phase of the COVID-19 pandemic.*
 
 ## Project Structure
 **`/data`**
