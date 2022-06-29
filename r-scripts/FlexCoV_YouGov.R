@@ -3,9 +3,9 @@ library(tidyverse, lubridate, foreign)
 rm(list = ls())
 
 #Fear of catching the disease (YouGov)
-setwd("C:/Users/Simon/Nextcloud/Shared/COVID-19 Shared Folder/analysis/FlexCov/data")
+setwd("C:/Users/Simon/Nextcloud/Shared/COVID-19 Shared Folder/analysis/FlexCov")
 # setdwd("YOURPATH")
-data <- readxl::read_xlsx("YouGov_FearCatching.xlsx", skip = 1)
+data <- readxl::read_xlsx("./data/YouGov_FearCatching.xlsx", skip = 1)
 data$DateTime <- lubridate::as_datetime(data$DateTime)
 data_long <- gather(data,key = "country",value = "percent", -DateTime, factor_key = TRUE)
 data_long$isoweek <- lubridate::isoweek(data_long$DateTime)
@@ -21,10 +21,10 @@ weekly_Fear$DateTime <- stringr::str_replace_all(string = weekly_Fear$DateTime, 
 weekly_Fear$DateTime <- stringr::str_replace_all(string = weekly_Fear$DateTime, pattern = "22:00:00", replacement = "")
 weekly_Fear$DateTime <- stringr::str_replace_all(string = weekly_Fear$DateTime, pattern = "23:00:00", replacement = "")
 
-write.dta(weekly_Fear, "./YouGov_WeeklyFear.dta")
+write.dta(weekly_Fear, "./data_out/YouGov_WeeklyFear.dta")
 
 #Mask wearing prevalence (YouGov)
-data <- readxl::read_xlsx("YouGov_MaskWearing.xlsx", skip = 1)
+data <- readxl::read_xlsx("./data/YouGov_MaskWearing.xlsx", skip = 1)
 data$DateTime <- lubridate::as_datetime(data$DateTime)
 data_long <- gather(data,key = "country",value = "percent", -DateTime, factor_key = TRUE)
 data_long$isoweek <- lubridate::isoweek(data_long$DateTime)
@@ -41,4 +41,4 @@ weekly_MaskWearing$DateTime <- stringr::str_replace_all(string = weekly_MaskWear
 weekly_MaskWearing$DateTime <- stringr::str_replace_all(string = weekly_MaskWearing$DateTime, pattern = "23:00:00", replacement = "")
 
 
-write.dta(weekly_MaskWearing, "./YouGov_WeeklyMaskWearing.dta")
+write.dta(weekly_MaskWearing, "./data_out/YouGov_WeeklyMaskWearing.dta")

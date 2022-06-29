@@ -1,4 +1,4 @@
-setwd("C:/Users/Simon/Nextcloud/Shared/COVID-19 Shared Folder/analysis/FlexCov/data")
+setwd("C:/Users/Simon/Nextcloud/Shared/COVID-19 Shared Folder/analysis/FlexCov")
 # setdwd("YOURPATH")
 
 library(tidyverse)
@@ -16,7 +16,7 @@ library(readxl)
 #weekly deaths attributed to COVID-19 per 1,000,000 people 
 #weekly deaths attributed to COVID-19 (7-day smoothed) per 1,000,000 people
 
-covid_cases <- read.csv("./daily_covid_cases.csv")
+covid_cases <- read.csv("./data/daily_covid_cases.csv")
 covid_cases$date <- lubridate::as_datetime(covid_cases$date)
 covid_cases$isoweek <- lubridate::isoweek(covid_cases$date)
 covid_cases$weekdays <- lubridate::wday(covid_cases$date, label = TRUE)
@@ -44,6 +44,6 @@ covid_cases$date <- stringr::str_replace_all(string = covid_cases$date, pattern 
 
 covid_cases[covid_cases==""]<-NA
           
-write.dta(covid_cases, "./owid_covid.dta")
+write.dta(covid_cases, "./data_out/owid_covid.dta")
 
 

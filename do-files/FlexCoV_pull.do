@@ -28,7 +28,7 @@
 	
 	clear all
 	
-	use "data/owid_covid.dta", clear
+	use "data_out/owid_covid.dta", clear
 	
 	keep date iso_year_week iso_code total_cases new_cases total_deaths ///
 		new_deaths total_cases_per_million new_cases_per_million ///
@@ -253,7 +253,7 @@
 	
 	clear all
 
-	use "data/YouGov_WeeklyMaskWearing"
+	use "data_out/YouGov_WeeklyMaskWearing"
 	
 	keep DateTime country percent iso_year_week mean
 	
@@ -308,7 +308,7 @@
 	
 	clear all
 
-	use "data/YouGov_WeeklyFear"
+	use "data_out/YouGov_WeeklyFear"
 	
 	keep DateTime country percent iso_year_week mean
 	
