@@ -12,9 +12,6 @@
 	if "`c(username)'" == "Simon" {
 		cd "C:\Users\Simon\Nextcloud\Shared\COVID-19 Shared Folder\analysis\FlexCov"
 	}
-	if "`c(username)'" == "heisig" {
-		cd "C:\Users\heisig\Nextcloud\Shared\COVID-19 Shared Folder\analysis\FlexCov"
-	}
 	
 	* "cd YOURPATH"
 
