@@ -16,7 +16,7 @@ The repository **FlexCov** was created to provide all data and code to reproduce
 - contains all raw data files necessary for the analysis
 
 **`/r-scripts`**
-- contains all r-scripts that cleans YouGov and OWID data 
+- contains all r-scripts that clean YouGov and OWID data 
 
 **`/do-files`**
 - contains all do-files analysis files necessary to perform data cleaning and analysis reported
