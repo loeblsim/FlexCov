@@ -12,5 +12,19 @@ The repository **FlexCov** was created to provide all data and code to reproduce
 > Jianghong Li, Plamen Akaliyski, Jan P. Heisig, Simon Löbl and Michael Minkov (2022). *Flexible societies excelled in saving lives in the first phase of the COVID-19 pandemic.*
 
 ## Project Structure
+**`/data`**
+- contains all raw data files necessary for the analysis
+
+**`/r-scripts`**
+- contains all r-scripts that cleans YouGov and OWID data 
+
+**`/do-files`**
+- contains all do-files analysis files necessary to perform data cleaning and analysis reported
+
+**`/data_out`**
+- contains the analysis data set, , to be then used in `/do-files/FlexCoV_analyses.do.`
+
+
+
 
 
