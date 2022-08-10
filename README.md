@@ -9,7 +9,7 @@
 
 ## Purpose of the Repository
 The repository **FlexCov** was created to provide all data and code to reproduce findings reported in:
-> XXX (2022). *Flexible societies excelled in saving lives in the first phase of the COVID-19 pandemic.*
+> Li J, Akaliyski P, Heisig JP, Löbl S and Minkov M (2022) *Flexible societies excelled in saving lives in the first phase of the COVID-19 pandemic.* Front. Psychol. 13:924385. doi: 10.3389/fpsyg.2022.924385
 
 ## Project Structure
 **`/data`**
