@@ -122,8 +122,7 @@ appendix1 +
   theme(axis.text.x   = element_text(family = "TNR", size = 14),
         axis.text.y   = element_text(family = "TNR", size = 14)) +
   labs(x = "Liberal Democracy Index",
-       y = "Log. number of deaths per million until October 31, 2020", 
-       caption = "Source of death numbers: Ritchie et al. 2020\nRetrieval date: 20.02.2022",
+       y = "Log. number of deaths per million until October 31, 2020",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.47, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), legend.position = "bottom") +
@@ -196,8 +195,7 @@ appendix2 +
   theme(axis.text.x   = element_text(family = "TNR", size = 14),
         axis.text.y   = element_text(family = "TNR", size = 14)) +
   labs(x = "Liberal Democracy Index",
-       y = "Log. number of infections per million until October 31, 2020", 
-       caption = "Source of death numbers: Ritchie et al. 2020\nRetrieval date: 20.02.2022",
+       y = "Log. number of infections per million until October 31, 2020",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.47, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), legend.position = "bottom") +
@@ -271,8 +269,7 @@ appendix3 +
   theme(axis.text.x   = element_text(family = "TNR", size = 14),
         axis.text.y   = element_text(family = "TNR", size = 14)) +
   labs(x = "Log. GDP per capita",
-       y = "Log. number of deaths per million until October 31, 2020", 
-       caption = "Source of death numbers: Ritchie et al. 2020\nRetrieval date: 20.02.2022",
+       y = "Log. number of deaths per million until October 31, 2020",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.47, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), legend.position = "bottom") +
@@ -347,7 +344,6 @@ appendix4 +
         axis.text.y   = element_text(family = "TNR", size = 14)) +
   labs(x = "Log. GDP per capita",
        y = "Log. number of infections per million until October 31, 2020",
-       caption = "Source of death numbers: Ritchie et al. 2020\nRetrieval date: 20.02.2022",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.5, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), legend.position = "bottom") +
@@ -425,8 +421,7 @@ appendix5 +
   geom_point(aes(shape = used2, color = used2),size = 5, alpha = .5) + 
   geom_text_repel(show.legend = FALSE, box.padding = 0.2, point.padding = 0.2, 
                   size = 6, segment.alpha = 0.5, family = "TNR") +
-  scale_shape_manual(
-    values=c(16, 17),
+  scale_shape_manual(values=c(16, 17),
     labels = c("Not included in Tables 1\nand 3 in main article due to missing data on covariates",
                "Included in Tables 1 and 3 in main article")) + 
   scale_linetype_manual(name = NULL,  values = c(1,1)) +
@@ -436,15 +431,14 @@ appendix5 +
                "95% C.I. for 50 countries with\ndata on flexibility-monumentalism")) +
   scale_fill_manual(
     values=c('#FF0099','#0066FF')) +
-  scale_x_continuous(limits = c(-3.1, 3.1), breaks = c(-3,-2,-1,0,1,2,3)) +
-  scale_y_continuous(limits = c(-2.1, 8.6), breaks = -2:8) +
+  scale_x_continuous(limits = c(-2.5, 2.8), breaks = c(-2,-1,0,1,2,3)) +
+  scale_y_continuous(limits = c(-2, 8.4), breaks = -2:8) +
  theme_bw() +
-  theme(axis.text.x   = element_text(family = "TNR", size = 14),
-        axis.text.y   = element_text(family = "TNR", size = 14)) +
-  labs(x = "Monumentalism <<<   >>> Flexibility",
-       y = "Log. number of deaths per million until October 31, 2020", 
-       caption = "Source of death numbers: Ritchie et al. 2020\nRetrieval date: 20.02.2022"
-       ,shape = "", color = "") +
+  theme(axis.text.x   = element_text(family = "TNR", size = 16),
+        axis.text.y   = element_text(family = "TNR", size = 16)) +
+  labs(x = "Monumentalism <<<   >>> Flexibility     ",
+       y = "Log. number of deaths per million until October 31, 2020",
+       shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.45, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), 
         legend.position = "bottom",
@@ -456,7 +450,7 @@ appendix5 +
 
 
 
-ggsave(file="./graphs/appendix5.png", width=20, height=15)
+ggsave(file="./graphs/appendix5.png", width=17, height=13)
 
 
 #
@@ -524,25 +518,23 @@ appendix7 +
   geom_point(aes(shape = used4, color = used4),size = 5, alpha = .5) + 
   geom_text_repel(show.legend = FALSE, box.padding = 0.2, point.padding = 0.2, 
                   size = 6, segment.alpha = 0.5, family = "TNR") +
-  scale_shape_manual(
-    values=c(16, 17),
+  scale_shape_manual(values=c(16, 17),
     labels = c("Not inclueded in Tables 2 and 4 in the\nmain article due to missing data on covariates (incl. mediators)",
                "Included in Tables 2 and 4 in main article")) + 
-  scale_linetype_manual(name = NULL,  values = c(2,1)) +
+  scale_linetype_manual(name = NULL,  values = c(1,1)) +
   scale_color_manual(
     values=c('#FF0099','#0066FF'),
     labels = c("95% C.I. for 23 countries included in Tables 2 and 4 in the \nmain article (valid data on all covariates, incl. mediators)",
                "95% C.I. for 50 countries with\ndata on flexibility-monumentalism")) +
   scale_fill_manual(
     values=c('#FF0099','#0066FF')) +
-  scale_x_continuous(limits = c(-3.1, 3.1), breaks = c(-3,-2,-1,0,1,2,3)) +
-  scale_y_continuous(limits = c(-3.1, 8.6), breaks = -3:8) +
+  scale_x_continuous(limits = c(-2.5, 2.8), breaks = c(-2,-1,0,1,2,3)) +
+  scale_y_continuous(limits = c(-2, 8.4), breaks = -2:8) +
   theme_bw() +
-  theme(axis.text.x   = element_text(family = "TNR", size = 14),
-        axis.text.y   = element_text(family = "TNR", size = 14)) +
-  labs(x = "Monumentalism <<<   >>> Flexibility",
+  theme(axis.text.x   = element_text(family = "TNR", size = 16),
+        axis.text.y   = element_text(family = "TNR", size = 16)) +
+  labs(x = "Monumentalism <<<   >>> Flexibility              ",
        y = "Log. number of deaths per million until October 31, 2020",
-       caption = "Source of death numbers: Ritchie et al. 2020\nRetrieval date: 20.02.2022",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.48, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"),
@@ -551,11 +543,11 @@ appendix7 +
   theme(legend.text=element_text(size=16, family = "TNR", margin = margin(t = 5))) +
   guides(shape = guide_legend(nrow = 2, override.aes=list(color = c('#FF0099','#0066FF')), order = 1),
          color = guide_legend(nrow = 2, override.aes=list(shape = 15, alpha = .5, size = 5)),
-         linetype = guide_legend(nrow = 2, override.aes=list(color = c('#0066FF', '#FF0099') , linetype = c(1,2)), order = 2))
+         linetype = guide_legend(nrow = 2, override.aes=list(color = c('#0066FF', '#FF0099') , linetype = c(1,1)), order = 2))
 
 
 
-ggsave(file="./graphs/appendix6.png", width=20, height=15)
+ggsave(file="./graphs/appendix6.png", width=19, height=15)
 
 
 ############
@@ -581,7 +573,7 @@ plot1 <- FlexCoV_oct_6_true %>%
   dplyr::select(ln_daily_cum_deaths_million, FLXMON_std, country_iso3, used2, used1) %>%
   drop_na() %>%
   ggplot(mapping = aes(x = FLXMON_std, y = ln_daily_cum_deaths_million, label = country_iso3)) +
-  geom_point(aes(shape = FlexCoV_oct_6_true$region, color = FlexCoV_oct_6_true$region),size = 4, alpha = .5) +
+  geom_point(aes(shape = FlexCoV_oct_6_true$region, color = FlexCoV_oct_6_true$region),size = 4, alpha = .8) +
   geom_text_repel(show.legend = FALSE, box.padding = 0.4, point.padding = 0.2,
                   size = 5, segment.alpha = 0.5, family = "TNR") +
   theme_bw() +
