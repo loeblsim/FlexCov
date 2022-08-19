@@ -107,7 +107,7 @@ appendix1 +
     alpha = 0.25) +
   geom_point(aes(shape = used2, color = used2),size = 2, alpha = .5) + 
   geom_text_repel(show.legend = FALSE, box.padding = 0.3, point.padding = 0, min.segment.length = 0.5, 
-                  nudge_x = .02, nudge_y = .04, size = 4, segment.alpha = 0.5, family = "TNR", max.overlaps  = Inf) +
+                  nudge_x = .01, nudge_y = .02, size = 5, segment.alpha = 0.5, family = "TNR", max.overlaps  = Inf) +
   scale_linetype_manual(name = NULL,  values = c(1,1)) +
   scale_shape_manual(values = c(16,17),
                      labels = c("Not included in Tables 1 to 4\ndue to missing on flexibility and covariates",
@@ -116,13 +116,14 @@ appendix1 +
   scale_fill_manual(
     values=c('#FF0099'),
     labels=c("95% C.I. for 160 countries with available data\non death rate and liberal democracy index")) +
-  scale_x_continuous(limits = c(0, 1), breaks = c(0,0.2,0.4,0.6,0.8,1)) +
-  scale_y_continuous(limits = c(-3.1, 8.1), breaks = -3:8) +
+  scale_x_continuous(limits = c(0, 0.9), breaks = c(0,0.2,0.4,0.6,0.8), expand = c(0,0)) +
+  scale_y_continuous(limits = c(-2.8, 8.1), breaks = -3:8, expand = c(0,0)) +
   theme_bw() +
   theme(axis.text.x   = element_text(family = "TNR", size = 14),
         axis.text.y   = element_text(family = "TNR", size = 14)) +
   labs(x = "Liberal Democracy Index",
        y = "Log. number of deaths per million until October 31, 2020",
+       caption = "Source of death numbers: Ritchie H et al. 2020b. Coronavirus Pandemic (COVID-19):\nhttps://ourworldindata.org/coronavirus.",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.47, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), legend.position = "bottom") +
@@ -133,7 +134,7 @@ appendix1 +
          color = "none")
 
 
-ggsave(file="./graphs/appendix1.png", width=15, height=10)    
+ggsave(file="./graphs/appendix1.png", width=17, height=13)    
 
 #
 #Appendix: Figure S2: Log. number of infections per million until October 31, 2020
@@ -180,7 +181,7 @@ appendix2 +
     alpha = 0.25) +
   geom_point(aes(shape = used2, color = used2),size = 2, alpha = .5) + 
   geom_text_repel(show.legend = FALSE, box.padding = 0.3, point.padding = 0, min.segment.length = 0.5, 
-                  nudge_x = .02, nudge_y = .04, size = 4, segment.alpha = 0.5, family = "TNR", max.overlaps  = Inf) +
+                  nudge_x = .01, nudge_y = .02, size = 5, segment.alpha = 0.5, family = "TNR", max.overlaps  = Inf) +
   scale_linetype_manual(name = NULL,  values = c(1,1)) +
   scale_shape_manual(values = c(16,17),
                      labels = c("Not included in Tables 1 to 4\ndue to missing on flexibility and covariates",
@@ -189,13 +190,14 @@ appendix2 +
   scale_fill_manual(
     values=c('#FF0099'),
     labels=c("95% C.I. for 168 countries with available data\non death rate and liberal democracy index")) +
-  scale_x_continuous(limits = c(0, 1), breaks = c(0,0.2,0.4,0.6,0.8,1)) +
-  scale_y_continuous(limits = c(1, 11), breaks = 1:11) +
+  scale_x_continuous(limits = c(0, 0.9), breaks = c(0,0.2,0.4,0.6,0.8), expand = c(0,0)) +
+  scale_y_continuous(limits = c(0.8, 11.2), breaks = 1:11, expand = c(0,0)) +
   theme_bw() +
   theme(axis.text.x   = element_text(family = "TNR", size = 14),
         axis.text.y   = element_text(family = "TNR", size = 14)) +
   labs(x = "Liberal Democracy Index",
        y = "Log. number of infections per million until October 31, 2020",
+       caption = "Source of infection numbers: Ritchie H et al. 2020b. Coronavirus Pandemic (COVID-19):\nhttps://ourworldindata.org/coronavirus.",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.47, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), legend.position = "bottom") +
@@ -206,7 +208,7 @@ appendix2 +
          color = "none")
 
 
-ggsave(file="./graphs/appendix2.png", width=15, height=10)    
+ggsave(file="./graphs/appendix2.png", width=17, height=13)    
 
 
 #
@@ -254,7 +256,7 @@ appendix3 +
     alpha = 0.25) +
   geom_point(aes(shape = used2, color = used2),size = 2, alpha = .5) + 
   geom_text_repel(show.legend = FALSE, box.padding = 0.3, point.padding = 0, min.segment.length = 0.5, 
-                  nudge_x = .02, nudge_y = .04, size = 4, segment.alpha = 0.5, family = "TNR", max.overlaps  = Inf) +
+                  nudge_x = .01, nudge_y = .02, size = 5, segment.alpha = 0.5, family = "TNR", max.overlaps  = Inf) +
   scale_linetype_manual(name = NULL,  values = c(1,1)) +
   scale_shape_manual(values = c(16,17),
                      labels = c("Not included in Tables 1 to 4\ndue to missing on flexibility and covariates",
@@ -263,13 +265,14 @@ appendix3 +
   scale_fill_manual(
     values=c('#FF0099'),
     labels=c("95% C.I. for 168 countries with available data\non death rate and Log. GDP per capita")) +
-  scale_x_continuous(limits = c(5, 12), breaks = 5:12) +
-  scale_y_continuous(limits = c(-3, 8), breaks = -3:8) +
+  scale_x_continuous(limits = c(5.5, 11.7), breaks = 6:11, expand = c(0,0)) +
+  scale_y_continuous(limits = c(-3, 8.2), breaks = -2:8, expand = c(0,0)) +
   theme_bw() +
   theme(axis.text.x   = element_text(family = "TNR", size = 14),
         axis.text.y   = element_text(family = "TNR", size = 14)) +
   labs(x = "Log. GDP per capita",
        y = "Log. number of deaths per million until October 31, 2020",
+       caption = "Source of death numbers: Ritchie H et al. 2020b. Coronavirus Pandemic (COVID-19):\nhttps://ourworldindata.org/coronavirus.",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.47, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), legend.position = "bottom") +
@@ -280,7 +283,7 @@ appendix3 +
          color = "none")
 
 
-ggsave(file="./graphs/appendix3.png", width=15, height=10)  
+ggsave(file="./graphs/appendix3.png", width=17, height=13)  
 
 
 #
@@ -328,7 +331,7 @@ appendix4 +
     alpha = 0.25) +
   geom_point(aes(shape = used2, color = used2),size = 2, alpha = .5) + 
   geom_text_repel(show.legend = FALSE, box.padding = 0.3, point.padding = 0, min.segment.length = 0.5, 
-                  nudge_x = .02, nudge_y = .04, size = 4, segment.alpha = 0.5, family = "TNR", max.overlaps  = Inf) +
+                  nudge_x = .01, nudge_y = .02, size = 5, segment.alpha = 0.5, family = "TNR", max.overlaps  = Inf) +
   scale_linetype_manual(name = NULL,  values = c(1,1)) +
   scale_shape_manual(values = c(16,17),
                      labels = c("Not included in Tables 1 to 4\ndue to missing on flexibility and covariates",
@@ -337,13 +340,14 @@ appendix4 +
   scale_fill_manual(
     values=c('#FF0099'),
     labels=c("95% C.I. for 171 countries with available data\non death rate and Log. GDP per capita")) +
-  scale_x_continuous(limits = c(5, 12), breaks = 5:12) +
-  scale_y_continuous(limits = c(1, 11.5), breaks = 1:11) +
+  scale_x_continuous(limits = c(5.5, 11.7), breaks = 6:11, expand = c(0,0)) +
+  scale_y_continuous(limits = c(0.8, 11.5), breaks = 1:11, expand = c(0,0)) +
   theme_bw() +
   theme(axis.text.x   = element_text(family = "TNR", size = 14),
         axis.text.y   = element_text(family = "TNR", size = 14)) +
   labs(x = "Log. GDP per capita",
        y = "Log. number of infections per million until October 31, 2020",
+       caption = "Source of infection numbers: Ritchie H et al. 2020b. Coronavirus Pandemic (COVID-19):\nhttps://ourworldindata.org/coronavirus.",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.5, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), legend.position = "bottom") +
@@ -354,7 +358,7 @@ appendix4 +
          color = "none")
 
 
-ggsave(file="./graphs/appendix4.png", width=15, height=10)    
+ggsave(file="./graphs/appendix4.png", width=17, height=13)    
 
 
 #
@@ -419,8 +423,8 @@ appendix5 +
                   ymax = lm6_dat$fit.upr), 
     alpha = 0.2, fill = "#0066FF") +
   geom_point(aes(shape = used2, color = used2),size = 5, alpha = .5) + 
-  geom_text_repel(show.legend = FALSE, box.padding = 0.2, point.padding = 0.2, 
-                  size = 6, segment.alpha = 0.5, family = "TNR") +
+  geom_text_repel(show.legend = FALSE, box.padding = 0.3, point.padding = 0, 
+                  nudge_x = .02, nudge_y = .04, size = 6, segment.alpha = 0.5, family = "TNR") +
   scale_shape_manual(values=c(16, 17),
     labels = c("Not included in Tables 1\nand 3 in main article due to missing data on covariates",
                "Included in Tables 1 and 3 in main article")) + 
@@ -431,13 +435,14 @@ appendix5 +
                "95% C.I. for 50 countries with\ndata on flexibility-monumentalism")) +
   scale_fill_manual(
     values=c('#FF0099','#0066FF')) +
-  scale_x_continuous(limits = c(-2.5, 2.8), breaks = c(-2,-1,0,1,2,3)) +
-  scale_y_continuous(limits = c(-2, 8.4), breaks = -2:8) +
+  scale_x_continuous(limits = c(-2.6, 2.8), breaks = c(-2,-1,0,1,2,3), expand = c(0,0)) +
+  scale_y_continuous(limits = c(-1.5, 8.4), breaks = -1:8, expand = c(0,0)) +
  theme_bw() +
   theme(axis.text.x   = element_text(family = "TNR", size = 16),
         axis.text.y   = element_text(family = "TNR", size = 16)) +
-  labs(x = "Monumentalism <<<   >>> Flexibility     ",
+  labs(x = "Monumentalism <<<   >>> Flexibility   ",
        y = "Log. number of deaths per million until October 31, 2020",
+       caption = "Source of death numbers: Ritchie H et al. 2020b. Coronavirus Pandemic (COVID-19):\nhttps://ourworldindata.org/coronavirus.",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.45, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), 
@@ -528,13 +533,14 @@ appendix7 +
                "95% C.I. for 50 countries with\ndata on flexibility-monumentalism")) +
   scale_fill_manual(
     values=c('#FF0099','#0066FF')) +
-  scale_x_continuous(limits = c(-2.5, 2.8), breaks = c(-2,-1,0,1,2,3)) +
-  scale_y_continuous(limits = c(-2, 8.4), breaks = -2:8) +
+  scale_x_continuous(limits = c(-2.7, 2.8), breaks = c(-2,-1,0,1,2,3), expand = c(0,0)) +
+  scale_y_continuous(limits = c(-1.5, 8.5), breaks = -1:8, expand = c(0,0)) +
   theme_bw() +
   theme(axis.text.x   = element_text(family = "TNR", size = 16),
         axis.text.y   = element_text(family = "TNR", size = 16)) +
-  labs(x = "Monumentalism <<<   >>> Flexibility              ",
+  labs(x = "Monumentalism <<<   >>> Flexibility         ",
        y = "Log. number of deaths per million until October 31, 2020",
+       caption = "Source of death numbers: Ritchie H et al. 2020b. Coronavirus Pandemic (COVID-19):\nhttps://ourworldindata.org/coronavirus.",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.48, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"),
@@ -581,7 +587,7 @@ plot1 <- FlexCoV_oct_6_true %>%
        axis.text.y   = element_text(family = "TNR", size = 14)) +
   labs(x = "Monumentalism <<<   >>> Flexibility",
        y = "Log. number of deaths per million until October 31, 2020", 
-       caption = "Source of death numbers: Ritchie et al. 2020\nRetrieval date: 20.02.2022",
+       caption = "Source of death numbers: Ritchie H et al. 2020b. Coronavirus Pandemic (COVID-19):\nhttps://ourworldindata.org/coronavirus.",
        shape = "", color = "") +
   theme(axis.title.x = element_text(hjust = 0.47, size = 19, family = "TNR"),
         axis.title.y = element_text(hjust = 0.5, size = 19, family = "TNR"), 
@@ -589,9 +595,9 @@ plot1 <- FlexCoV_oct_6_true %>%
         legend.text=element_text(size=16, family = "TNR"),
         plot.caption = element_text(family = "TNR", size = 14, hjust = 0)) +
   scale_shape_manual(values=c(15, 16, 17, 18, 9)) +
-  scale_x_continuous(limits = c(-3.1, 3.1), breaks = c(-3,-2,-1,0,1,2,3))
+  scale_x_continuous(limits = c(-2.5, 2.7), breaks = c(-2,-1,0,1,2), expand = c(0,0))
 
-ggsave(file="./graphs/figure1a.png", width=15, height=10)
+ggsave(file="./graphs/figure1.png", width=15, height=10)
 
 
 #
